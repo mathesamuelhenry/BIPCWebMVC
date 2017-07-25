@@ -26,5 +26,11 @@ namespace BIPCMVC.Controllers
 
             return View();
         }
+
+        [Route("home/released/{years}/{month}")]
+        public ActionResult ByReleaseDate(int years, int month)
+        {
+            return Content(years + "/" + month);
+        }
     }
 }
